@@ -1,6 +1,14 @@
 @extends('layouts.themes.NiceAdmin.app')
 
+@section('breadcrumb')
+    @php
+    $links = ["DAshboard","Profile","user"];
+    @endphp
+    <x-niceadmin.breadcrumb :links="$links" title="User" />    
+@endsection
+
 @section('page-title','Home')
+
 @section('content')
 <h1>Some content</h1>
 {{-- <div class="container">

@@ -18,3 +18,7 @@ Route::get('/demo-welcome', function () {
 Route::get('/demo-alerts', function () {
     return view('pages.niceadmin.alerts');
 });
+
+Route::get('/demo-accordions', function () {
+    return view('pages.niceadmin.accordions');
+});

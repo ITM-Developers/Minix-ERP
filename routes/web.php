@@ -22,3 +22,7 @@ Route::get('/demo-alerts', function () {
 Route::get('/demo-accordions', function () {
     return view('pages.niceadmin.accordions');
 });
+
+Route::get('/demo-badges', function () {
+    return view('pages.niceadmin.badges');
+});

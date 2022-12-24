@@ -1,13 +1,6 @@
 @extends('layouts.themes.NiceAdmin.app')
 
-@section('breadcrumb')
-    @php
-    $links = ["Components","Alerts"];
-    @endphp
-    <x-niceadmin.breadcrumb :links="$links" title="Alerts" />
-@endsection
-
-@section('page-title','Demo of NiceAdmin Alerts')
+@section('page-title','Alerts')
 
 @section('content')
     <p class="instrucciones">
@@ -22,18 +15,18 @@
 
     <h5 class="card-title">Default Alerts</h5>
 
-    <!-- HTML generated using hilite.me -->
-    <div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
-    <pre></pre>
-    <pre style="margin: 0; line-height: 125%">    <span style="color: #f92672">&lt;x-niceadmin-alert</span> <span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;primary&quot;</span>   <span style="color: #a6e22e">:message=</span><span style="color: #e6db74">&quot;$message&quot;</span><span style="color: #f92672">/&gt;</span>
-    <span style="color: #f92672"><span style="color: #f92672">&lt;x-niceadmin-alert</span> <span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;secondary&quot;</span> <span style="color: #a6e22e">:message=</span><span style="color: #e6db74">&quot;$message&quot;</span><span style="color: #f92672">/&gt;</span>
-    <span style="color: #f92672"><span style="color: #f92672">&lt;x-niceadmin-alert</span> <span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;success&quot;</span>   <span style="color: #a6e22e">:message=</span><span style="color: #e6db74">&quot;$message&quot;</span><span style="color: #f92672">/&gt;</span>
-    <span style="color: #f92672"><span style="color: #f92672">&lt;x-niceadmin-alert</span> <span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;danger&quot;</span>    <span style="color: #a6e22e">:message=</span><span style="color: #e6db74">&quot;$message&quot;</span><span style="color: #f92672">/&gt;</span>
-    <span style="color: #f92672"><span style="color: #f92672">&lt;x-niceadmin-alert</span> <span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;warning&quot;</span>   <span style="color: #a6e22e">:message=</span><span style="color: #e6db74">&quot;$message&quot;</span><span style="color: #f92672">/&gt;</span>
-    <span style="color: #f92672"><span style="color: #f92672">&lt;x-niceadmin-alert</span> <span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;info&quot;</span>      <span style="color: #a6e22e">:message=</span><span style="color: #e6db74">&quot;$message&quot;</span><span style="color: #f92672">/&gt;</span>
-    <span style="color: #f92672"><span style="color: #f92672">&lt;x-niceadmin-alert</span> <span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;light&quot;</span>     <span style="color: #a6e22e">:message=</span><span style="color: #e6db74">&quot;$message&quot;</span><span style="color: #f92672">/&gt;</span>
-    <span style="color: #f92672"><span style="color: #f92672">&lt;x-niceadmin-alert</span> <span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;dark&quot;</span>      <span style="color: #a6e22e">:message=</span><span style="color: #e6db74">&quot;$message&quot;</span><span style="color: #f92672">/&gt;</span>
-    </pre></div><div class="mb-3"></div>
+    <div class="code-sample mb-4">
+    <pre>
+    <span></span>
+    <span class="c-pink">&lt;x-niceadmin-alert</span> <span class="c-green">type=</span><span class="c-beige">&quot;primary&quot;</span>   <span class="c-green">:message=</span><span class="c-beige">&quot;$message&quot;</span><span class="c-pink">/&gt;</span>
+    <span class="c-pink"><span class="c-pink">&lt;x-niceadmin-alert</span> <span class="c-green">type=</span><span class="c-beige">&quot;secondary&quot;</span> <span class="c-green">:message=</span><span class="c-beige">&quot;$message&quot;</span><span class="c-pink">/&gt;</span>
+    <span class="c-pink"><span class="c-pink">&lt;x-niceadmin-alert</span> <span class="c-green">type=</span><span class="c-beige">&quot;success&quot;</span>   <span class="c-green">:message=</span><span class="c-beige">&quot;$message&quot;</span><span class="c-pink">/&gt;</span>
+    <span class="c-pink"><span class="c-pink">&lt;x-niceadmin-alert</span> <span class="c-green">type=</span><span class="c-beige">&quot;danger&quot;</span>    <span class="c-green">:message=</span><span class="c-beige">&quot;$message&quot;</span><span class="c-pink">/&gt;</span>
+    <span class="c-pink"><span class="c-pink">&lt;x-niceadmin-alert</span> <span class="c-green">type=</span><span class="c-beige">&quot;warning&quot;</span>   <span class="c-green">:message=</span><span class="c-beige">&quot;$message&quot;</span><span class="c-pink">/&gt;</span>
+    <span class="c-pink"><span class="c-pink">&lt;x-niceadmin-alert</span> <span class="c-green">type=</span><span class="c-beige">&quot;info&quot;</span>      <span class="c-green">:message=</span><span class="c-beige">&quot;$message&quot;</span><span class="c-pink">/&gt;</span>
+    <span class="c-pink"><span class="c-pink">&lt;x-niceadmin-alert</span> <span class="c-green">type=</span><span class="c-beige">&quot;light&quot;</span>     <span class="c-green">:message=</span><span class="c-beige">&quot;$message&quot;</span><span class="c-pink">/&gt;</span>
+    <span class="c-pink"><span class="c-pink">&lt;x-niceadmin-alert</span> <span class="c-green">type=</span><span class="c-beige">&quot;dark&quot;</span>      <span class="c-green">:message=</span><span class="c-beige">&quot;$message&quot;</span><span class="c-pink">/&gt;</span></pre>
+    </div>
 
     <x-nice-admin-alert type="primary"   :message="$message"/>
     <x-nice-admin-alert type="secondary" :message="$message"/>
@@ -44,21 +37,20 @@
     <x-nice-admin-alert type="light"     :message="$message"/>
     <x-nice-admin-alert type="dark"      :message="$message"/>
 
-
     <h5 class="card-title">With Icons</h5>
     
-    <!-- HTML generated using hilite.me -->
-    <div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
-    <pre></pre>
-    <pre style="margin: 0; line-height: 125%">    <span style="color: #f92672">&lt;x-nice-admin-alert-icon</span> <span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;primary&quot;</span>      <span style="color: #a6e22e">icon=</span><span style="color: #e6db74">&quot;bi-star&quot;</span>                  <span style="color: #a6e22e">:message=</span><span style="color: #e6db74">&quot;$message&quot;</span><span style="color: #f92672">/&gt;</span>
-    <span style="color: #f92672">&lt;x-nice-admin-alert-icon</span> <span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;secondary&quot;</span>    <span style="color: #a6e22e">icon=</span><span style="color: #e6db74">&quot;bi-collection&quot;</span>            <span style="color: #a6e22e">:message=</span><span style="color: #e6db74">&quot;$message&quot;</span><span style="color: #f92672">/&gt;</span>
-    <span style="color: #f92672">&lt;x-nice-admin-alert-icon</span> <span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;success&quot;</span>      <span style="color: #a6e22e">icon=</span><span style="color: #e6db74">&quot;bi-check-circle&quot;</span>          <span style="color: #a6e22e">:message=</span><span style="color: #e6db74">&quot;$message&quot;</span><span style="color: #f92672">/&gt;</span>
-    <span style="color: #f92672">&lt;x-nice-admin-alert-icon</span> <span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;danger&quot;</span>       <span style="color: #a6e22e">icon=</span><span style="color: #e6db74">&quot;bi-exclamation-octagon&quot;</span>   <span style="color: #a6e22e">:message=</span><span style="color: #e6db74">&quot;$message&quot;</span><span style="color: #f92672">/&gt;</span>
-    <span style="color: #f92672">&lt;x-nice-admin-alert-icon</span> <span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;warning&quot;</span>      <span style="color: #a6e22e">icon=</span><span style="color: #e6db74">&quot;bi-exclamation-triangle&quot;</span>  <span style="color: #a6e22e">:message=</span><span style="color: #e6db74">&quot;$message&quot;</span><span style="color: #f92672">/&gt;</span>
-    <span style="color: #f92672">&lt;x-nice-admin-alert-icon</span> <span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;info&quot;</span>         <span style="color: #a6e22e">icon=</span><span style="color: #e6db74">&quot;bi-info-circle&quot;</span>           <span style="color: #a6e22e">:message=</span><span style="color: #e6db74">&quot;$message&quot;</span><span style="color: #f92672">/&gt;</span>
-    <span style="color: #f92672">&lt;x-nice-admin-alert-icon</span> <span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;light&quot;</span>        <span style="color: #a6e22e">icon=</span><span style="color: #e6db74">&quot;bi-folder&quot;</span>                <span style="color: #a6e22e">:message=</span><span style="color: #e6db74">&quot;$message&quot;</span><span style="color: #f92672">/&gt;</span>
-    <span style="color: #f92672">&lt;x-nice-admin-alert-icon</span> <span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;dark&quot;</span>         <span style="color: #a6e22e">icon=</span><span style="color: #e6db74">&quot;bi-folder&quot;</span>                <span style="color: #a6e22e">:message=</span><span style="color: #e6db74">&quot;$message&quot;</span><span style="color: #f92672">/&gt;</span>
-    </pre></div><div class="mb-3"></div>
+    <div class="code-sample mb-4">
+    <pre>
+    <span></span>
+    <span class="c-pink">&lt;x-nice-admin-alert-icon</span> <span class="c-green">type=</span><span class="c-beige">&quot;primary&quot;</span>      <span class="c-green">icon=</span><span class="c-beige">&quot;bi-star&quot;</span>                  <span class="c-green">:message=</span><span class="c-beige">&quot;$message&quot;</span><span class="c-pink">/&gt;</span>
+    <span class="c-pink">&lt;x-nice-admin-alert-icon</span> <span class="c-green">type=</span><span class="c-beige">&quot;secondary&quot;</span>    <span class="c-green">icon=</span><span class="c-beige">&quot;bi-collection&quot;</span>            <span class="c-green">:message=</span><span class="c-beige">&quot;$message&quot;</span><span class="c-pink">/&gt;</span>
+    <span class="c-pink">&lt;x-nice-admin-alert-icon</span> <span class="c-green">type=</span><span class="c-beige">&quot;success&quot;</span>      <span class="c-green">icon=</span><span class="c-beige">&quot;bi-check-circle&quot;</span>          <span class="c-green">:message=</span><span class="c-beige">&quot;$message&quot;</span><span class="c-pink">/&gt;</span>
+    <span class="c-pink">&lt;x-nice-admin-alert-icon</span> <span class="c-green">type=</span><span class="c-beige">&quot;danger&quot;</span>       <span class="c-green">icon=</span><span class="c-beige">&quot;bi-exclamation-octagon&quot;</span>   <span class="c-green">:message=</span><span class="c-beige">&quot;$message&quot;</span><span class="c-pink">/&gt;</span>
+    <span class="c-pink">&lt;x-nice-admin-alert-icon</span> <span class="c-green">type=</span><span class="c-beige">&quot;warning&quot;</span>      <span class="c-green">icon=</span><span class="c-beige">&quot;bi-exclamation-triangle&quot;</span>  <span class="c-green">:message=</span><span class="c-beige">&quot;$message&quot;</span><span class="c-pink">/&gt;</span>
+    <span class="c-pink">&lt;x-nice-admin-alert-icon</span> <span class="c-green">type=</span><span class="c-beige">&quot;info&quot;</span>         <span class="c-green">icon=</span><span class="c-beige">&quot;bi-info-circle&quot;</span>           <span class="c-green">:message=</span><span class="c-beige">&quot;$message&quot;</span><span class="c-pink">/&gt;</span>
+    <span class="c-pink">&lt;x-nice-admin-alert-icon</span> <span class="c-green">type=</span><span class="c-beige">&quot;light&quot;</span>        <span class="c-green">icon=</span><span class="c-beige">&quot;bi-folder&quot;</span>                <span class="c-green">:message=</span><span class="c-beige">&quot;$message&quot;</span><span class="c-pink">/&gt;</span>
+    <span class="c-pink">&lt;x-nice-admin-alert-icon</span> <span class="c-green">type=</span><span class="c-beige">&quot;dark&quot;</span>         <span class="c-green">icon=</span><span class="c-beige">&quot;bi-folder&quot;</span>                <span class="c-green">:message=</span><span class="c-beige">&quot;$message&quot;</span><span class="c-pink">/&gt;</span></pre>
+    </div>
 
     <x-nice-admin-alert-icon type="primary"      icon="bi-star"                  :message="$message"/>
     <x-nice-admin-alert-icon type="secondary"    icon="bi-collection"            :message="$message"/>
@@ -72,18 +64,18 @@
 
     <h5 class="card-title">Outlined</h5>
 
-    <!-- HTML generated using hilite.me -->
-    <div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
-    <pre></pre>
-    <pre style="margin: 0; line-height: 125%">    <span style="color: #f92672">&lt;x-nice-admin-alert-outlined</span> <span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;primary&quot;</span>   <span style="color: #a6e22e">:message=</span><span style="color: #e6db74">&quot;$message&quot;</span><span style="color: #f92672">/&gt;</span>
-    <span style="color: #f92672">&lt;x-nice-admin-alert-outlined</span> <span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;secondary&quot;</span> <span style="color: #a6e22e">:message=</span><span style="color: #e6db74">&quot;$message&quot;</span><span style="color: #f92672">/&gt;</span>
-    <span style="color: #f92672">&lt;x-nice-admin-alert-outlined</span> <span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;success&quot;</span>   <span style="color: #a6e22e">:message=</span><span style="color: #e6db74">&quot;$message&quot;</span><span style="color: #f92672">/&gt;</span>
-    <span style="color: #f92672">&lt;x-nice-admin-alert-outlined</span> <span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;danger&quot;</span>    <span style="color: #a6e22e">:message=</span><span style="color: #e6db74">&quot;$message&quot;</span><span style="color: #f92672">/&gt;</span>
-    <span style="color: #f92672">&lt;x-nice-admin-alert-outlined</span> <span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;warning&quot;</span>   <span style="color: #a6e22e">:message=</span><span style="color: #e6db74">&quot;$message&quot;</span><span style="color: #f92672">/&gt;</span>
-    <span style="color: #f92672">&lt;x-nice-admin-alert-outlined</span> <span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;info&quot;</span>      <span style="color: #a6e22e">:message=</span><span style="color: #e6db74">&quot;$message&quot;</span><span style="color: #f92672">/&gt;</span>
-    <span style="color: #f92672">&lt;x-nice-admin-alert-outlined</span> <span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;light&quot;</span>     <span style="color: #a6e22e">:message=</span><span style="color: #e6db74">&quot;$message&quot;</span><span style="color: #f92672">/&gt;</span>
-    <span style="color: #f92672">&lt;x-nice-admin-alert-outlined</span> <span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;dark&quot;</span>      <span style="color: #a6e22e">:message=</span><span style="color: #e6db74">&quot;$message&quot;</span><span style="color: #f92672">/&gt;</span>
-    </pre></div><div class="mb-3"></div>
+    <div class="code-sample mb-4">
+    <pre>
+    <span></span>
+    <span class="c-pink">&lt;x-nice-admin-alert-outlined</span> <span class="c-green">type=</span><span class="c-beige">&quot;primary&quot;</span>   <span class="c-green">:message=</span><span class="c-beige">&quot;$message&quot;</span><span class="c-pink">/&gt;</span>
+    <span class="c-pink">&lt;x-nice-admin-alert-outlined</span> <span class="c-green">type=</span><span class="c-beige">&quot;secondary&quot;</span> <span class="c-green">:message=</span><span class="c-beige">&quot;$message&quot;</span><span class="c-pink">/&gt;</span>
+    <span class="c-pink">&lt;x-nice-admin-alert-outlined</span> <span class="c-green">type=</span><span class="c-beige">&quot;success&quot;</span>   <span class="c-green">:message=</span><span class="c-beige">&quot;$message&quot;</span><span class="c-pink">/&gt;</span>
+    <span class="c-pink">&lt;x-nice-admin-alert-outlined</span> <span class="c-green">type=</span><span class="c-beige">&quot;danger&quot;</span>    <span class="c-green">:message=</span><span class="c-beige">&quot;$message&quot;</span><span class="c-pink">/&gt;</span>
+    <span class="c-pink">&lt;x-nice-admin-alert-outlined</span> <span class="c-green">type=</span><span class="c-beige">&quot;warning&quot;</span>   <span class="c-green">:message=</span><span class="c-beige">&quot;$message&quot;</span><span class="c-pink">/&gt;</span>
+    <span class="c-pink">&lt;x-nice-admin-alert-outlined</span> <span class="c-green">type=</span><span class="c-beige">&quot;info&quot;</span>      <span class="c-green">:message=</span><span class="c-beige">&quot;$message&quot;</span><span class="c-pink">/&gt;</span>
+    <span class="c-pink">&lt;x-nice-admin-alert-outlined</span> <span class="c-green">type=</span><span class="c-beige">&quot;light&quot;</span>     <span class="c-green">:message=</span><span class="c-beige">&quot;$message&quot;</span><span class="c-pink">/&gt;</span>
+    <span class="c-pink">&lt;x-nice-admin-alert-outlined</span> <span class="c-green">type=</span><span class="c-beige">&quot;dark&quot;</span>      <span class="c-green">:message=</span><span class="c-beige">&quot;$message&quot;</span><span class="c-pink">/&gt;</span></pre>
+    </div>
 
     <x-nice-admin-alert-outlined type="primary"   :message="$message"/>
     <x-nice-admin-alert-outlined type="secondary" :message="$message"/>
@@ -94,21 +86,20 @@
     <x-nice-admin-alert-outlined type="light"     :message="$message"/>
     <x-nice-admin-alert-outlined type="dark"      :message="$message"/>
 
-
     <h5 class="card-title">Default Solid Color</h5>
-
-    <!-- HTML generated using hilite.me -->
-    <div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
-    <pre></pre>
-    <pre style="margin: 0; line-height: 125%">    <span style="color: #f92672">&lt;x-nice-admin-alert-solid</span> <span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;primary&quot;</span>   <span style="color: #a6e22e">:message=</span><span style="color: #e6db74">&quot;$message&quot;</span><span style="color: #f92672">/&gt;</span>
-    <span style="color: #f92672">&lt;x-nice-admin-alert-solid</span> <span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;secondary&quot;</span> <span style="color: #a6e22e">:message=</span><span style="color: #e6db74">&quot;$message&quot;</span><span style="color: #f92672">/&gt;</span>
-    <span style="color: #f92672">&lt;x-nice-admin-alert-solid</span> <span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;success&quot;</span>   <span style="color: #a6e22e">:message=</span><span style="color: #e6db74">&quot;$message&quot;</span><span style="color: #f92672">/&gt;</span>
-    <span style="color: #f92672">&lt;x-nice-admin-alert-solid</span> <span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;danger&quot;</span>    <span style="color: #a6e22e">:message=</span><span style="color: #e6db74">&quot;$message&quot;</span><span style="color: #f92672">/&gt;</span>
-    <span style="color: #f92672">&lt;x-nice-admin-alert-solid</span> <span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;warning&quot;</span>   <span style="color: #a6e22e">:message=</span><span style="color: #e6db74">&quot;$message&quot;</span><span style="color: #f92672">/&gt;</span>
-    <span style="color: #f92672">&lt;x-nice-admin-alert-solid</span> <span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;info&quot;</span>      <span style="color: #a6e22e">:message=</span><span style="color: #e6db74">&quot;$message&quot;</span><span style="color: #f92672">/&gt;</span>
-    <span style="color: #f92672">&lt;x-nice-admin-alert-solid</span> <span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;light&quot;</span>     <span style="color: #a6e22e">:message=</span><span style="color: #e6db74">&quot;$message&quot;</span><span style="color: #f92672">/&gt;</span>
-    <span style="color: #f92672">&lt;x-nice-admin-alert-solid</span> <span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;dark&quot;</span>      <span style="color: #a6e22e">:message=</span><span style="color: #e6db74">&quot;$message&quot;</span><span style="color: #f92672">/&gt;</span>
-    </pre></div><div class="mb-3"></div>
+    
+    <div class="code-sample mb-4">
+    <pre>
+    <span></span>
+    <span class="c-pink">&lt;x-nice-admin-alert-solid</span> <span class="c-green">type=</span><span class="c-beige">&quot;primary&quot;</span>   <span class="c-green">:message=</span><span class="c-beige">&quot;$message&quot;</span><span class="c-pink">/&gt;</span>
+    <span class="c-pink">&lt;x-nice-admin-alert-solid</span> <span class="c-green">type=</span><span class="c-beige">&quot;secondary&quot;</span> <span class="c-green">:message=</span><span class="c-beige">&quot;$message&quot;</span><span class="c-pink">/&gt;</span>
+    <span class="c-pink">&lt;x-nice-admin-alert-solid</span> <span class="c-green">type=</span><span class="c-beige">&quot;success&quot;</span>   <span class="c-green">:message=</span><span class="c-beige">&quot;$message&quot;</span><span class="c-pink">/&gt;</span>
+    <span class="c-pink">&lt;x-nice-admin-alert-solid</span> <span class="c-green">type=</span><span class="c-beige">&quot;danger&quot;</span>    <span class="c-green">:message=</span><span class="c-beige">&quot;$message&quot;</span><span class="c-pink">/&gt;</span>
+    <span class="c-pink">&lt;x-nice-admin-alert-solid</span> <span class="c-green">type=</span><span class="c-beige">&quot;warning&quot;</span>   <span class="c-green">:message=</span><span class="c-beige">&quot;$message&quot;</span><span class="c-pink">/&gt;</span>
+    <span class="c-pink">&lt;x-nice-admin-alert-solid</span> <span class="c-green">type=</span><span class="c-beige">&quot;info&quot;</span>      <span class="c-green">:message=</span><span class="c-beige">&quot;$message&quot;</span><span class="c-pink">/&gt;</span>
+    <span class="c-pink">&lt;x-nice-admin-alert-solid</span> <span class="c-green">type=</span><span class="c-beige">&quot;light&quot;</span>     <span class="c-green">:message=</span><span class="c-beige">&quot;$message&quot;</span><span class="c-pink">/&gt;</span>
+    <span class="c-pink">&lt;x-nice-admin-alert-solid</span> <span class="c-green">type=</span><span class="c-beige">&quot;dark&quot;</span>      <span class="c-green">:message=</span><span class="c-beige">&quot;$message&quot;</span><span class="c-pink">/&gt;</span></pre>
+    </div>
     
     <x-nice-admin-alert-solid type="primary"   :message="$message"/>
     <x-nice-admin-alert-solid type="secondary" :message="$message"/>
@@ -119,22 +110,20 @@
     <x-nice-admin-alert-solid type="light"     :message="$message"/>
     <x-nice-admin-alert-solid type="dark"      :message="$message"/>
 
-
     <h5 class="card-title">With Heading &amp Separator</h5>
 
-    <!-- HTML generated using hilite.me -->
-    <div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
-    <pre></pre>
-    <pre style="margin: 0; line-height: 125%">    <span style="color: #f92672">&lt;x-nice-admin-alert-title</span> <span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;primary&quot;</span>   <span style="color: #a6e22e">title=</span><span style="color: #e6db74">&quot;Primary Alert&quot;</span>   <span style="color: #a6e22e">:message=</span><span style="color: #e6db74">&quot;$message&quot;</span><span style="color: #f92672">/&gt;</span>
-    <span style="color: #f92672">&lt;x-nice-admin-alert-title</span> <span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;secondary&quot;</span> <span style="color: #a6e22e">title=</span><span style="color: #e6db74">&quot;Seconday Alert&quot;</span>  <span style="color: #a6e22e">:message=</span><span style="color: #e6db74">&quot;$message&quot;</span><span style="color: #f92672">/&gt;</span>
-    <span style="color: #f92672">&lt;x-nice-admin-alert-title</span> <span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;success&quot;</span>   <span style="color: #a6e22e">title=</span><span style="color: #e6db74">&quot;Success Alert&quot;</span>   <span style="color: #a6e22e">:message=</span><span style="color: #e6db74">&quot;$message&quot;</span><span style="color: #f92672">/&gt;</span>
-    <span style="color: #f92672">&lt;x-nice-admin-alert-title</span> <span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;danger&quot;</span>    <span style="color: #a6e22e">title=</span><span style="color: #e6db74">&quot;Danger Alert&quot;</span>    <span style="color: #a6e22e">:message=</span><span style="color: #e6db74">&quot;$message&quot;</span><span style="color: #f92672">/&gt;</span>
-    <span style="color: #f92672">&lt;x-nice-admin-alert-title</span> <span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;warning&quot;</span>   <span style="color: #a6e22e">title=</span><span style="color: #e6db74">&quot;Warning Alert&quot;</span>   <span style="color: #a6e22e">:message=</span><span style="color: #e6db74">&quot;$message&quot;</span><span style="color: #f92672">/&gt;</span>
-    <span style="color: #f92672">&lt;x-nice-admin-alert-title</span> <span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;info&quot;</span>      <span style="color: #a6e22e">title=</span><span style="color: #e6db74">&quot;Info Alert&quot;</span>      <span style="color: #a6e22e">:message=</span><span style="color: #e6db74">&quot;$message&quot;</span><span style="color: #f92672">/&gt;</span>
-    <span style="color: #f92672">&lt;x-nice-admin-alert-title</span> <span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;light&quot;</span>     <span style="color: #a6e22e">title=</span><span style="color: #e6db74">&quot;Light Alert&quot;</span>     <span style="color: #a6e22e">:message=</span><span style="color: #e6db74">&quot;$message&quot;</span><span style="color: #f92672">/&gt;</span>
-    <span style="color: #f92672">&lt;x-nice-admin-alert-title</span> <span style="color: #a6e22e">type=</span><span style="color: #e6db74">&quot;dark&quot;</span>      <span style="color: #a6e22e">title=</span><span style="color: #e6db74">&quot;Dark Alert&quot;</span>      <span style="color: #a6e22e">:message=</span><span style="color: #e6db74">&quot;$message&quot;</span><span style="color: #f92672">/&gt;</span>
-    </pre></div><div class="mb-4"></div>
-
+    <div class="code-sample mb-4">
+    <pre>
+    <span></span>
+    <span class="c-pink">&lt;x-nice-admin-alert-title</span> <span class="c-green">type=</span><span class="c-beige">&quot;primary&quot;</span>   <span class="c-green">title=</span><span class="c-beige">&quot;Primary Alert&quot;</span>   <span class="c-green">:message=</span><span class="c-beige">&quot;$message&quot;</span><span class="c-pink">/&gt;</span>
+    <span class="c-pink">&lt;x-nice-admin-alert-title</span> <span class="c-green">type=</span><span class="c-beige">&quot;secondary&quot;</span> <span class="c-green">title=</span><span class="c-beige">&quot;Seconday Alert&quot;</span>  <span class="c-green">:message=</span><span class="c-beige">&quot;$message&quot;</span><span class="c-pink">/&gt;</span>
+    <span class="c-pink">&lt;x-nice-admin-alert-title</span> <span class="c-green">type=</span><span class="c-beige">&quot;success&quot;</span>   <span class="c-green">title=</span><span class="c-beige">&quot;Success Alert&quot;</span>   <span class="c-green">:message=</span><span class="c-beige">&quot;$message&quot;</span><span class="c-pink">/&gt;</span>
+    <span class="c-pink">&lt;x-nice-admin-alert-title</span> <span class="c-green">type=</span><span class="c-beige">&quot;danger&quot;</span>    <span class="c-green">title=</span><span class="c-beige">&quot;Danger Alert&quot;</span>    <span class="c-green">:message=</span><span class="c-beige">&quot;$message&quot;</span><span class="c-pink">/&gt;</span>
+    <span class="c-pink">&lt;x-nice-admin-alert-title</span> <span class="c-green">type=</span><span class="c-beige">&quot;warning&quot;</span>   <span class="c-green">title=</span><span class="c-beige">&quot;Warning Alert&quot;</span>   <span class="c-green">:message=</span><span class="c-beige">&quot;$message&quot;</span><span class="c-pink">/&gt;</span>
+    <span class="c-pink">&lt;x-nice-admin-alert-title</span> <span class="c-green">type=</span><span class="c-beige">&quot;info&quot;</span>      <span class="c-green">title=</span><span class="c-beige">&quot;Info Alert&quot;</span>      <span class="c-green">:message=</span><span class="c-beige">&quot;$message&quot;</span><span class="c-pink">/&gt;</span>
+    <span class="c-pink">&lt;x-nice-admin-alert-title</span> <span class="c-green">type=</span><span class="c-beige">&quot;light&quot;</span>     <span class="c-green">title=</span><span class="c-beige">&quot;Light Alert&quot;</span>     <span class="c-green">:message=</span><span class="c-beige">&quot;$message&quot;</span><span class="c-pink">/&gt;</span>
+    <span class="c-pink">&lt;x-nice-admin-alert-title</span> <span class="c-green">type=</span><span class="c-beige">&quot;dark&quot;</span>      <span class="c-green">title=</span><span class="c-beige">&quot;Dark Alert&quot;</span>      <span class="c-green">:message=</span><span class="c-beige">&quot;$message&quot;</span><span class="c-pink">/&gt;</span></pre>
+    </div>
 
     <x-nice-admin-alert-title type="primary"   title="Primary Alert"   :message="$message"/>
     <x-nice-admin-alert-title type="secondary" title="Seconday Alert"  :message="$message"/>

@@ -2,16 +2,15 @@
 
 @section('breadcrumb')
     @php
-    $links = ["DAshboard","Profile","user"];
+    $links = ["Dashboard","Home"];
     @endphp
-    <x-niceadmin.breadcrumb :links="$links" title="User" />    
+    <x-niceadmin.breadcrumb :links="$links" title="Home" />    
 @endsection
 
 @section('page-title','Home')
 
 @section('content')
-<h1>Some content</h1>
-{{-- <div class="container">
+<div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -26,7 +25,7 @@
 
                     {{ __('You are logged in!') }}
 
-                    <script>
+                    {{-- <script>
                         window.addEventListener('load', (event) => {
                             Swal.fire(
                                 'Good job!',
@@ -34,10 +33,10 @@
                                 'success'
                             )
                         });
-                    </script>
+                    </script> --}}
                 </div>
             </div>
         </div>
     </div>
-</div> --}}
+</div>
 @endsection

@@ -483,6 +483,7 @@ h6 {
 }
 
 .header-nav .nav-icon {
+	padding: .5rem 1rem;
 	font-size: 20px;
 	color: #012970;
 }
@@ -1069,31 +1070,31 @@ h6 {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
-.contact .info-box {
+.info-box {
 	padding: 28px 30px;
 }
 
-.contact .info-box i {
+.info-box i {
 	font-size: 38px;
 	line-height: 0;
 	color: #4154f1;
 }
 
-.contact .info-box h3 {
+.info-box h3 {
 	font-size: 20px;
 	color: #012970;
 	font-weight: 700;
 	margin: 20px 0 10px 0;
 }
 
-.contact .info-box p {
+.info-box p {
 	padding: 0;
 	line-height: 24px;
 	font-size: 14px;
 	margin-bottom: 0;
 }
 
-.contact .php-email-form .error-message {
+.php-email-form .error-message {
 	display: none;
 	color: #fff;
 	background: #ed3c0d;
@@ -1103,7 +1104,7 @@ h6 {
 	font-weight: 600;
 }
 
-.contact .php-email-form .sent-message {
+.php-email-form .sent-message {
 	display: none;
 	color: #fff;
 	background: #18d26e;
@@ -1113,7 +1114,7 @@ h6 {
 	font-weight: 600;
 }
 
-.contact .php-email-form .loading {
+.php-email-form .loading {
 	display: none;
 	background: #fff;
 	text-align: center;
@@ -1121,7 +1122,7 @@ h6 {
 	margin-bottom: 24px;
 }
 
-.contact .php-email-form .loading:before {
+.php-email-form .loading:before {
 	content: "";
 	display: inline-block;
 	border-radius: 50%;
@@ -1134,28 +1135,28 @@ h6 {
 	animation: animate-loading 1s linear infinite;
 }
 
-.contact .php-email-form input,
-.contact .php-email-form textarea {
+.php-email-form input,
+.php-email-form textarea {
 	border-radius: 0;
 	box-shadow: none;
 	font-size: 14px;
 	border-radius: 0;
 }
 
-.contact .php-email-form input:focus,
-.contact .php-email-form textarea:focus {
+.php-email-form input:focus,
+.php-email-form textarea:focus {
 	border-color: #4154f1;
 }
 
-.contact .php-email-form input {
+.php-email-form input {
 	padding: 10px 15px;
 }
 
-.contact .php-email-form textarea {
+.php-email-form textarea {
 	padding: 12px 15px;
 }
 
-.contact .php-email-form button[type=submit] {
+.php-email-form button[type=submit] {
 	background: #4154f1;
 	border: 0;
 	padding: 10px 30px;
@@ -1164,7 +1165,7 @@ h6 {
 	border-radius: 4px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.php-email-form button[type=submit]:hover {
 	background: #5969f3;
 }
 

@@ -21,9 +21,10 @@
 		rel="stylesheet">
 
     <!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    @vite(['resources/sass/app.scss','resources/css/app.css', 'resources/js/app.js'])
 
     <link rel="stylesheet" href="CSS/NiceAdmin/main.css">
+    @stack('CSS')
 </head>
 <body>
 
@@ -35,7 +36,7 @@
         
 		@yield('breadcrumb')
 
-        <section class="section dashboard">
+        <section class="section">
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
@@ -52,8 +53,9 @@
 
 	@include('layouts.themes.NiceAdmin.footer')
 
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-        class="bi bi-arrow-up-short"></i></a>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+        <i class="bi bi-arrow-up-short"></i>
+    </a>
         
-    <script src="JS/NiceAdmin/main.js"></script>
+    @stack('JS')
 </body>

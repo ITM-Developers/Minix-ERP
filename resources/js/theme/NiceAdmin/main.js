@@ -1,21 +1,27 @@
-/**
-* Template Name: NiceAdmin - v2.2.2
-* Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+import axios from 'axios';
+window.axios = axios;
+window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+
 (function () {
+	
 	"use strict";
 
 	/**
-	 * Easy selector helper function
+	 * Funcion de ayuda para seleccionar elementos del DOM de manera sencilla
+	 * @param {string} cssSelector 
+	 * Es un string que representa al selector css.
+	 * @param {boolean} all 
+	 * Es una bandera para seleccionar uno o multiples elementos
+	 * @returns 
+	 * Retorna el elemento en el DOM, o un array del elementos del DOM en caso de que se indique
+	 * la bandera all como true
 	 */
-	const select = (el, all = false) => {
-		el = el.trim()
+	const select = (cssSelector, all = false) => {
+		cssSelector = cssSelector.trim()
 		if (all) {
-			return [...document.querySelectorAll(el)]
+			return [...document.querySelectorAll(cssSelector)]
 		} else {
-			return document.querySelector(el)
+			return document.querySelector(cssSelector)
 		}
 	}
 
@@ -38,7 +44,8 @@
 	}
 
 	/**
-	 * Sidebar toggle
+	 * Agregamos un 'listener' al evento 'onClick' en el elemento 'toggle-sidebar-btn' para
+	 * crear el efecto de toggle en el sidebar
 	 */
 	if (select('.toggle-sidebar-btn')) {
 		on('click', '.toggle-sidebar-btn', function (e) {
@@ -47,7 +54,8 @@
 	}
 
 	/**
-	 * Search bar toggle
+	 * Agregamos un 'listener' al evento 'onClick' en el elemento 'search-bar-toggle' para
+	 * crear el efecto de toggle en el input para realizar busquedas
 	 */
 	if (select('.search-bar-toggle')) {
 		on('click', '.search-bar-toggle', function (e) {
@@ -118,11 +126,11 @@
 	/**
 	 * Initiate quill editors
 	 */
-	if (select('.quill-editor-default')) {
-		new Quill('.quill-editor-default', {
-			theme: 'snow'
-		});
-	}
+	// if (select('.quill-editor-default')) {
+	// 	new Quill('.quill-editor-default', {
+	// 		theme: 'snow'
+	// 	});
+	// }
 
 	// if (select('.quill-editor-bubble')) {
 	// 	new Quill('.quill-editor-bubble', {
@@ -182,7 +190,7 @@
 	 * Initiate TinyMCE Editor
 	 */
 
-	var useDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+	// var useDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
 	// tinymce.init({
 	// 	selector: 'textarea.tinymce-editor',
@@ -278,42 +286,25 @@
 	// });
 
 	/**
-	 * Initiate Bootstrap validation check
-	 */
-	var needsValidation = document.querySelectorAll('.needs-validation')
-
-	Array.prototype.slice.call(needsValidation)
-		.forEach(function (form) {
-			form.addEventListener('submit', function (event) {
-				if (!form.checkValidity()) {
-					event.preventDefault()
-					event.stopPropagation()
-				}
-
-				form.classList.add('was-validated')
-			}, false)
-		})
-
-	/**
 	 * Initiate Datatables
 	 */
-	const datatables = select('.datatable', true)
-	datatables.forEach(datatable => {
-		new simpleDatatables.DataTable(datatable);
-	})
+	// const datatables = select('.datatable', true)
+	// datatables.forEach(datatable => {
+	// 	new simpleDatatables.DataTable(datatable);
+	// })
 
 	/**
 	 * Autoresize echart charts
 	 */
-	const mainContainer = select('#main');
-	if (mainContainer) {
-		setTimeout(() => {
-			new ResizeObserver(function () {
-				select('.echart', true).forEach(getEchart => {
-					echarts.getInstanceByDom(getEchart).resize();
-				})
-			}).observe(mainContainer);
-		}, 200);
-	}
+	// const mainContainer = select('#main');
+	// if (mainContainer) {
+	// 	setTimeout(() => {
+	// 		new ResizeObserver(function () {
+	// 			select('.echart', true).forEach(getEchart => {
+	// 				echarts.getInstanceByDom(getEchart).resize();
+	// 			})
+	// 		}).observe(mainContainer);
+	// 	}, 200);
+	// }
 
 })();

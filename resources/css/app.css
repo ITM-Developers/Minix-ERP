@@ -1,0 +1,47 @@
+/* 
+  ____ ___  ____  _____   ____    _    __  __ ____  _     _____ ____  
+ / ___/ _ \|  _ \| ____| / ___|  / \  |  \/  |  _ \| |   | ____/ ___| 
+| |  | | | | | | |  _|   \___ \ / _ \ | |\/| | |_) | |   |  _| \___ \ 
+| |__| |_| | |_| | |___   ___) / ___ \| |  | |  __/| |___| |___ ___) |
+ \____\___/|____/|_____| |____/_/   \_\_|  |_|_|   |_____|_____|____/ 
+
+ CODE SAMPLES
+ 
+ En las paginas de los demos se muestra el codigo HTML necesario para crear dichas plantillas, para esto
+ usamos texto Preformateado '<pre>', los estilos que se muestran a continuacino son exclusivamente  para
+ eso.
+ */
+.code-sample
+{
+    background: #272822;
+    overflow:auto;
+    width:auto;
+    border:solid white;
+    border-width:.1em .1em .1em .8em;
+    padding:.2em .6em;
+    color: white;
+}
+.code-samnple pre{
+    margin: 0;
+    line-height: 125%;
+}
+
+.c-pink
+{
+    color: #f92672;
+}
+
+.c-green
+{
+    color: #a6e22e;
+}
+
+.c-beige
+{
+    color: #e6db74;
+}
+
+.c-white{
+    color: #FFFFFF;
+}
+/* ======================================================================================================= */

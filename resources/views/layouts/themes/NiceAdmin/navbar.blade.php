@@ -3,7 +3,7 @@
     <!-- LOGO -->
     <div class="d-flex align-items-center justify-content-between">
         <a href="{{ route('welcome') }}" class="logo d-flex align-items-center">
-            <img src="assets/img/logo.png" alt="">
+            <img src="ICO/NiceAdmin/logo.png" alt="">
             <span class="d-none d-lg-block">NiceAdmin</span>
         </a>
         <i class="bi bi-list toggle-sidebar-btn"></i>
@@ -173,12 +173,12 @@
 
                 <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
                     <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-                    <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
+                    <span class="d-none d-md-block dropdown-toggle ps-2">{{ Auth::user()->name }}</span>
                 </a><!-- End Profile Iamge Icon -->
 
                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                     <li class="dropdown-header">
-                        <h6>Kevin Anderson</h6>
+                        <h6>{{ Auth::user()->name }}</h6>
                         <span>Web Designer</span>
                     </li>
                     <li>
@@ -215,8 +215,13 @@
                         <hr class="dropdown-divider">
                     </li>
 
+                    <!-- Este es el formulario para cerrar sesion -->
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
+
                     <li>
-                        <a class="dropdown-item d-flex align-items-center" href="#">
+                        <a class="dropdown-item d-flex align-items-center" href="#" id="btn-logout">
                             <i class="bi bi-box-arrow-right"></i>
                             <span>Sign Out</span>
                         </a>
@@ -229,3 +234,14 @@
     </nav><!-- End Icons Navigation -->
 
 </header>
+
+@push('JS')
+<script>
+    // Evento para cerrar sesion
+    let btnLogOut = document.getElementById('btn-logout');
+    btnLogOut.addEventListener('click', function(){
+        let logOutForm = document.getElementById('logout-form');
+        logOutForm.submit();
+    });
+</script>
+@endpush
